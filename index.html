@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kindness Connect Band</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f9ff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            background: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            color: #0077cc;
+        }
+
+        .band {
+            width: 250px;
+            height: 50px;
+            background: linear-gradient(to right, #ff6b6b, #ffd93d, #6bcB77, #4d96ff);
+            border-radius: 25px;
+            margin: 20px auto;
+        }
+
+        .slogan {
+            font-size: 24px;
+            color: #e63946;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Kindness Connect Band</h1>
+
+    <div class="band"></div>
+
+    <p class="slogan">
+        Wear Kindness. Share Kindness. Change Lives.
+    </p>
+
+    <h2>What is it?</h2>
+    <p>
+        The Kindness Connect Band encourages people to perform acts of kindness
+        and pass kindness from one person to another.
+    </p>
+
+    <h2>Try It!</h2>
+    <button onclick="showKindnessTip()">
+        Get a Kindness Challenge
+    </button>
+
+    <p id="message"></p>
+</div>
+
+<script>
+function showKindnessTip() {
+    const tips = [
+        "Help a classmate with homework.",
+        "Say something nice to a friend.",
+        "Include someone sitting alone.",
+        "Thank your teacher today.",
+        "Help someone carry their books."
+    ];
+
+    const randomTip = tips[Math.floor(Math.random() * tips.length)];
+    document.getElementById("message").innerHTML = randomTip;
+}
+</script>
+
+</body>
+</html>
